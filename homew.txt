@@ -1,0 +1,6 @@
+django vazifa
+mybooks nomli app yarating.
+views da book_list nomli funksiya kelsin va unda kitoblar ro'yxati kelsin,
+kitobni ustiga bosganda shu kitob haqidagi page ochilsin.
+Ushbu page da kitob haqida ma'lumot kelsin va so'ngida ortga nomli link bo'lsin.
+link bosilsa kitoblar ro'yxatiga qaytilsin. 
