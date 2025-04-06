@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }} | Kitob haqida</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f2f2;
+            margin: 40px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .meta {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        .description {
+            line-height: 1.7;
+            text-align: justify;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jadidlar</h1>
+        <p class="meta">Muallif: 
+            <a href="/wiki/Jadidchilik" title="Jadidchilik">jadidlar</a> haqidagi sakkiz jildli kitoblar toʻplami. Sakkiz nafar jadidlar hayoti va ijodiga bagʻishlangan 
+            risolalarni turli muallif yozgan: Olim Usmonov 
+            <a href="/wiki/G%CA%BBulom_Zafariy" title="Gʻulom Zafariy">Gʻulom Zafariy</a><a href="/wiki/Abdulhamid_Cho%CA%BBlpon" title="Abdulhamid Choʻlpon">
+            Abdulhamid Choʻlpon</a>
+            , Ulugʻbek Dolimov <a href="/wiki/Is%CA%BChoqxon_To%CA%BBra_Ibrat" class="mw-redirect" title="Isʼhoqxon Toʻra Ibrat">Isʼhoqxon Toʻra Ibrat</a>
+            , Hamidulla Boltaboyev <a href="/wiki/Abdurauf_Fitrat" title="Abdurauf Fitrat">Abdurauf Fitrat</a>
+            , Bahodir Karimov <a href="/wiki/Abdulla_Qodiriy" title="Abdulla Qodiriy">Abdulla Qodiriy</a>, Oltinbek Olim 
+            <a href="/wiki/Abdulla_Avloniy" title="Abdulla Avloniy">Abdulla Avloniy</a>, Sotimjon Xolboyev
+            <a href="/wiki/Munavvarqori_qori_Abdurashidxonov" class="mw-redirect" title="Munavvarqori qori Abdurashidxonov">Munavvarqori qori Abdurashidxonov</a>
+            , Zaynobidin Abdirashidov <a href="/wiki/Mahmudxo%CA%BBja_Behbudiy" title="Mahmudxoʻja Behbudiy">Mahmudxoʻja Behbudiy</a>
+            haqidagi jildni yozgan.
+            | Yil: 2022 | Janr: Tarixiy</p>
+        <p class="description">{{ book.description }}</p>
+        <a href="{% url 'book_list' %}" class="back-link">← Bosh sahifaga qaytish</a>
+    </div>
+</body>
+</html>

@@ -8,7 +8,8 @@ def first(request):
 <a href='/second/'>Second View >></a> <br>
 
 <a href='pages/Kampyuterlar'>Computers >></a> <br>
-<a href='pages/Telefonlar'>Phones >></a>
+<a href='pages/Telefonlar'>Phones >></a> <br><br>
+<a href='mybooks/'>Kitoblar >></a>
 """
     return HttpResponse(html)
 
