@@ -1,59 +1,19 @@
-<!-- mybooks/templates/mybooks/book_list.html -->
-<!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <title>Kitoblar Ro'yxati</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #f9f9f9;
-            padding: 40px;
-        }
-        .book-card {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 5px solid #007bff;
-            border-radius: 5px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        .book-card h2 {
-            margin: 0;
-            color: #007bff;
-        }
-        .meta {
-            font-size: 14px;
-            color: #777;
-        }
-        .description {
-            margin-top: 10px;
-        }
-        a.detail-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: #007bff;
-            text-decoration: none;
-        }
-        a.detail-link:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <h1>📚 Kitoblar Ro'yxati</h1>
 
-    <h2>1984</h2>
-    <p class="meta">Muallif: George Orwell | Yil: 1949 | Janr: Distopiya</p>
-    <p class="description">
-    1984 — ingliz yozuvchisi George Orwell tomonidan yozilgan siyosiy-fantastik roman. Kitobda totalitar rejim ostidagi jamiyat tasvirlangan.
-    </p>
-
-    <h2>O‘tgan kunlar</h2>
-    <p class="meta">Muallif: Abdulla Qodiriy | Yil: 1926 | Janr: Tarixiy roman</p>
-    <p class="description">
-    O‘tgan kunlar — Abdulla Qodiriy tomonidan yozilgan ilk o‘zbek romani. U XIX asr Buxorosi va Toshkentidagi ijtimoiy hayot, muhabbat va ma’naviy kurashlarni o‘z ichiga oladi.
-    </p>
-    <a href='/../' class="back-link">← Bosh sahifaga qaytish</a>
+    {% for book in books %}
+        <div>
+            <h2><a href="{% url 'book_detail' book.pk %}">{{ book.title }}</a></h2>
+            <p>Muallif: {{ book.author }} | Yil: {{ book.year }} | Janr: {{ book.genre }}</p>
+        </div>
+    {% empty %}
+        <p>Hech qanday kitob topilmadi.</p>
+    {% endfor %}
 </body>
+<a href='/../'><< Main page</a>
 </html>
